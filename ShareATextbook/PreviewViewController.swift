@@ -35,6 +35,11 @@ class PreviewViewController: UIViewController{
         
         print("category=\(category)")
         
+        print("category=\(author)")
+        print("category=\(publisher)")
+        print("category=\(cateID)")
+        print("category=\(desc)")
+        print("category=\(edition)")
         
         upload()
     }
