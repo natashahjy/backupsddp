@@ -89,7 +89,9 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             
             //you can get selected value on pickerview
             let category = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].name)
+            let categoryId = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].id)
             previewVC.category = category
+            previewVC.cateID = categoryId
             previewVC.edition = editionTextField!.text
             
         }

@@ -17,6 +17,7 @@ class PreviewViewController: UIViewController{
     var author: String!
     var publisher: String!
     var edition: String!
+    var cateID: String!
     
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -57,7 +58,7 @@ class PreviewViewController: UIViewController{
     }
     
     func upload(){
-        UploadDataManager.upload(token: LoginGlobalVar.token, catID: categoryLabel.text!, bookTitle: titleLabel.text!, isbn: barcodeLabel.text!, desc: descLabel.text!, author: authorLabel.text!, publisher: publisherLabel.text!, edition: editionLabel.text!, photos: "", preferredLoc: "")
+        UploadDataManager.upload(token: LoginGlobalVar.token, catID: cateID, bookTitle: titleLabel.text!, isbn: barcodeLabel.text!, desc: descLabel.text!, author: authorLabel.text!, publisher: publisherLabel.text!, edition: editionLabel.text!, photos: "", preferredLoc: "")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
