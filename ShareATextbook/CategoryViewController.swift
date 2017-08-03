@@ -13,9 +13,12 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var barcode: String!
     var bookTitle: String!
     var desc: String!
+    var author: String!
+    var publisher: String!
     
     @IBOutlet weak var categoryPicker : UIPickerView!
     @IBOutlet weak var nextButton : UIButton!
+    @IBOutlet weak var editionTextField: UITextField!
     
     // Declare string array
     var pickerData: [String] = []
@@ -27,6 +30,10 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         print("barcode=\(barcode)")
         
         print("desc=\(desc)")
+        
+        print("author=\(author)")
+        
+        print("publisher=\(publisher)")
         
     }
     
@@ -77,9 +84,14 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             previewVC.barcode = barcode
             previewVC.bookTitle = bookTitle
             previewVC.desc = desc
+            previewVC.author = author
+            previewVC.publisher = publisher
+            
             //you can get selected value on pickerview
             let category = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].name)
             previewVC.category = category
+            previewVC.edition = editionTextField!.text
+            
         }
     }
 

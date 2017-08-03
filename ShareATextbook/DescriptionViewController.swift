@@ -15,12 +15,18 @@ class DescriptionViewController: UIViewController {
 
     @IBOutlet weak var descTextView: UITextView!
     
+    @IBOutlet weak var authorTextField: UITextField!
+    
+    @IBOutlet weak var publisherTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         var upload = Upload()
         upload.desc = descTextView!.text
+        upload.author = authorTextField!.text
+        upload.publisher = publisherTextField!.text
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +41,8 @@ class DescriptionViewController: UIViewController {
             categoryVC.barcode = barcode
             categoryVC.bookTitle = bookTitle
             categoryVC.desc = descTextView!.text
+            categoryVC.author = authorTextField!.text
+            categoryVC.publisher = publisherTextField!.text
         }
     }
 }
