@@ -14,7 +14,7 @@ import UIKit
 class Upload: NSObject {
     // Upload Object
     var token : String! = ""
-    var categoryID : String! = ""
+    var categoryID : [String] = []
     var title: String! = ""
     var barcode: String! = ""
     var desc : String! = ""

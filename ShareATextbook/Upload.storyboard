@@ -336,6 +336,9 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectButtonWithSender:" destination="QZU-Yy-6vf" eventType="touchUpInside" id="Lq3-JZ-FDK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

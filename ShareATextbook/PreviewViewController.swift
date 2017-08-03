@@ -18,6 +18,7 @@ class PreviewViewController: UIViewController{
     var publisher: String!
     var edition: String!
     var cateID: String!
+    var cateID2: String!
     
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -27,7 +28,6 @@ class PreviewViewController: UIViewController{
     @IBOutlet weak var publisherLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
-    
     @IBAction func confirmButton(_ sender: Any) {
         print("title=\(bookTitle)")
         
@@ -35,11 +35,11 @@ class PreviewViewController: UIViewController{
         
         print("category=\(category)")
         
-        print("category=\(author)")
-        print("category=\(publisher)")
-        print("category=\(cateID)")
-        print("category=\(desc)")
-        print("category=\(edition)")
+        print("author=\(author)")
+        print("publisher=\(publisher)")
+        print("cate ID=\(cateID)")
+        print("desc=\(desc)")
+        print("edition=\(edition)")
         
         upload()
     }
@@ -55,6 +55,7 @@ class PreviewViewController: UIViewController{
         self.editionLabel.text = edition
         self.authorLabel.text = author
         self.publisherLabel.text = publisher
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +74,7 @@ class PreviewViewController: UIViewController{
                                  edition: editionLabel.text!,
                                  photos: "",
                                  preferredLoc: "")
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
