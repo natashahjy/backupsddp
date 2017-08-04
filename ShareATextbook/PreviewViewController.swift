@@ -19,6 +19,7 @@ class PreviewViewController: UIViewController{
     var edition: String!
     var cateID: String!
     var cateID2: String!
+    var categoryIDs: [String] = []
     
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -55,6 +56,8 @@ class PreviewViewController: UIViewController{
         self.editionLabel.text = edition
         self.authorLabel.text = author
         self.publisherLabel.text = publisher
+        categoryIDs.append(cateID)
+        categoryIDs.append(cateID2)
         
     }
 
@@ -65,7 +68,7 @@ class PreviewViewController: UIViewController{
     
     func upload(){
         UploadDataManager.upload(token: LoginGlobalVar.token,
-                                 catID: cateID,
+                                 catID: categoryIDs,
                                  bookTitle: titleLabel.text!,
                                  isbn: barcodeLabel.text!,
                                  desc: descLabel.text!,
