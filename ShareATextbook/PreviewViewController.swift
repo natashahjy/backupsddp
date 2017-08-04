@@ -82,7 +82,7 @@ class PreviewViewController: UIViewController{
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Upload" {
-          
+          /*
             let uploadVC = segue.destination as! UploadViewController
             uploadVC.barcode = barcode
             uploadVC.bookTitle = bookTitle
@@ -91,7 +91,7 @@ class PreviewViewController: UIViewController{
             uploadVC.publisher = publisher
             uploadVC.edition = edition
             uploadVC.desc = desc
-
+             */
         }
     }
 
